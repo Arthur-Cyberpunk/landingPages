@@ -5907,6 +5907,13 @@
     "pretty-format" "^27.5.1"
     "semver" "^7.3.2"
 
+"jest-styled-components@^7.1.1":
+  "integrity" "sha512-OUq31R5CivBF8oy81dnegNQrRW13TugMol/Dz6ZnFfEyo03exLASod7YGwyHGuayYlKmCstPtz0RQ1+NrAbIIA=="
+  "resolved" "https://registry.npmjs.org/jest-styled-components/-/jest-styled-components-7.1.1.tgz"
+  "version" "7.1.1"
+  dependencies:
+    "@adobe/css-tools" "^4.0.1"
+
 "jest-util@^27.5.1":
   "integrity" "sha512-Kv2o/8jNvX1MQ0KGtw480E/w4fBCDOnH6+6DmeKi6LZUIlKA5kwY0YNdlzaWTiVgxqAqik11QyxDOKk543aKXw=="
   "resolved" "https://registry.npmjs.org/jest-util/-/jest-util-27.5.1.tgz"
@@ -8506,7 +8513,7 @@
   "resolved" "https://registry.npmjs.org/style-loader/-/style-loader-3.3.1.tgz"
   "version" "3.3.1"
 
-"styled-components@^5.3.6", "styled-components@>= 2":
+"styled-components@^5.3.6", "styled-components@>= 2", "styled-components@>= 5":
   "integrity" "sha512-hGTZquGAaTqhGWldX7hhfzjnIYBZ0IXQXkCYdvF1Sq3DsUaLx6+NTHC5Jj1ooM2F68sBiVz3lvhfwQs/S3l6qg=="
   "resolved" "https://registry.npmjs.org/styled-components/-/styled-components-5.3.6.tgz"
   "version" "5.3.6"
