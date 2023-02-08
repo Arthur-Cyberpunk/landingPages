@@ -89,7 +89,7 @@ describe('<Heading />', () => {
   it('should render correct heading element', () => {
     const { container } = renderTheme(<Heading as="h6">texto</Heading>);
     const heading = screen.getByRole('heading', { name: 'texto' });
-    const h6 = screen.getByRole({container});
+    const h6 = container.querySelector('h6');
 
     expect(h6.tagName.toLowerCase()).toBe('h6');
   });
