@@ -24,12 +24,13 @@ describe('<MenuLink />', () => {
   });
 
   it('should render open in a new tabb', () => {
-    renderTheme(
+    const { container } = renderTheme(
       <MenuLink link="http://localhost" newTab={false}>
         Children
       </MenuLink>,
     );
-    expect(screen.getByRole('link', { name: 'Children' }))
+    // eslint-disable-next-line testing-library/no-node-access
+    expect(container.firstChild)
       .toMatchInlineSnapshot(`
       .c0 {
         display: block;

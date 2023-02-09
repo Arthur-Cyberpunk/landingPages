@@ -29,7 +29,8 @@ describe('<NavLinks />', () => {
   });
 
   it('should match snapshot', () => {
-    renderTheme(<NavLinks links={mock} />);
-    expect(screen.getAllByRole('link')).toMatchSnapshot();
+    const { container } = renderTheme(<NavLinks links={mock} />);
+    // eslint-disable-next-line testing-library/no-node-access
+    expect(container.firstChild).toMatchSnapshot();
   });
 });
