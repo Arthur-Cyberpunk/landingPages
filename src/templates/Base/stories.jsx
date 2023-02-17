@@ -7,7 +7,6 @@ export default {
   component: Base,
   args: mockBase,
 };
-
 export const Template = (args) => {
   return (
     <div>
