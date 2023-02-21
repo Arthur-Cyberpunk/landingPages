@@ -1,42 +1,34 @@
-export const mapSections = (sections = []) => {
-  return sections.map((section) => {
-    if (section.__component === "section.section-two-columns") {
-      return mapSectionTwoColumns(section);
-    }
-    if (section.__component === "section.section-content") {
-      return mapSectionContent(section);
-    }
-    if (section.__component === "section.section-grid") {
-      return mapSectionGrid(section);
-    }
-
-    return section;
-  });
-};
-
-export const mapSectionTwoColumns = (section = {}) => {
+export const mapMenu = (menu = {}) => {
   const {
-    __component: component = "",
-    title = "",
-    description: text = "",
-    image: { url: srcImg = "" } = "",
-    metadata: { background = false, section_id: sectionId = "" } = false,
-  } = section;
+    open_in_new_tab: newTab = false,
+    logo_text: text = "",
+    logo_link: link = "",
+    menu: links = [],
+  } = menu;
+
+  const srcImg = menu.logo && menu.logo.url ? menu.logo.url : "";
 
   return {
-    component,
-    title,
+    newTab,
     text,
+    link,
     srcImg,
-    background,
-    sectionId,
+    links: mapMenuLinks(links),
   };
 };
 
-export const mapSectionContent = (section) => {
-  return section;
-};
+export const mapMenuLinks = (links = []) => {
+  return links.map((item) => {
+    const {
+      open_in_new_tab: newTab = false,
+      link_text: children = "",
+      url: link = "",
+    } = item;
 
-export const mapSectionGrid = (section) => {
-  return section;
+    return {
+      newTab,
+      children,
+      link,
+    };
+  });
 };
