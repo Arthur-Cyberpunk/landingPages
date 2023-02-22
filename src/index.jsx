@@ -1,16 +1,22 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
+
 import { GlobalStyles } from './styles/global-styles';
 import { theme } from './styles/theme';
 import Home from './templates/Home';
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <Home />
+      <BrowserRouter>
+        <Routes>
+          <Route to="*" element={Home} />
+        </Routes>
+      </BrowserRouter>
       <GlobalStyles />
     </ThemeProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root'),
 );
