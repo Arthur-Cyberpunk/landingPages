@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { mapData } from "../../api/map-data";
 import { Base } from "../Base";
 import { mockBase } from "../Base/mock";
+import { Loading } from "../Loading";
 import { PageNotFound } from "../PageNotFound";
 
 function Home() {
@@ -30,7 +31,7 @@ function Home() {
   }
 
   if (data && !data.slug) {
-    return <h1>Carregando...</h1>;
+    return <Loading />;
   }
 
   return <Base {...mockBase} />;
